@@ -24,6 +24,7 @@ function Items({ items }: { items: ItemProps }) {
     );
   return (
     <ul className="flex items-center justify-around ">
+      
       {thing}
     </ul>
   );

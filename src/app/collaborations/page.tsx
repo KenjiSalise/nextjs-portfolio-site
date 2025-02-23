@@ -6,7 +6,7 @@ export default function Collaborations() {
       <title>Collaborations</title>
     <Navbar/>
     <div>
-      Collabo
+      UNFINISHED
     </div>
     </main>
   )

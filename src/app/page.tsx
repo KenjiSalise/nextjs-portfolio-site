@@ -78,7 +78,7 @@ export default function Home() {
               </Link>
               </button>
               <button>
-              <Link href='https://github.com/KenjiSalise'>
+              <Link href='https://www.facebook.com/kenjisebastian.salise/'>
               <div className="bg-[#729FD7] hover:bg-[#4D3E3E] transition-all ease-in-out duration-150 py-2 px-10 rounded-lg flex gap-1">
               <div className='size-6'>
                 <Image src={Facebook} alt='Meta'/>

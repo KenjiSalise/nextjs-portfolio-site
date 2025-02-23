@@ -15,9 +15,10 @@ export default async function About() {
     <main>
       <title>Projects</title>
     <Navbar/>
-    <div className=''>
-      <Table/>
+    <div className='flex justify-center items-center'>
+      <h1 className='text-[3rem]'>Projects</h1>
     </div>
+      <Table/>
     </main>
   )
 }

@@ -1,21 +1,31 @@
 {
     "data": [{
             "image": "",
-            "name": "ken",
-            "link": "Hello.png",
-            "alt": "a"
+            "name": "Nextjs-portfolio-site",
+            "link": "https://github.com/KenjiSalise/nextjs-portfolio-site",
+            "desc": "An unfinished portfolio site using NextJS and TailwindCSS based on the ReactFramework for Samahan Sysdev",
+            "alt": "woolooloo"
         },
         {
             "image": "",
-            "name": "Kenji",
-            "link": "hello.png",
-            "alt": "a"
+            "name": "Payroll System",
+            "link": "https://github.com/KenjiSalise/payrollSystem",
+            "alt": "a",
+            "desc": "An unfinished payroll system in C++ CommandLine "
         },
         {
             "image": "",
-            "name": "a",
-            "link": "hello.png",
-            "alt": "a"
+            "name": "Inventory System",
+            "link": "https://github.com/KenjiSalise/github-test-netbens",
+            "alt": "a",
+            "desc": "An ongoing product inventory project in Java"
+        },
+        {
+            "alt": "",
+            "name": "Unfinished Pet Simulator",
+            "link": "https://github.com/KenjiSalise/pet_sim",
+            "image": "hello",
+            "desc": "An unfinished pet simulator in C++ CommandLine "
         }
     ]
 }

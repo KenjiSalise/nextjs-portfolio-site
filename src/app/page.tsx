@@ -1,101 +1,105 @@
+'use client';
 import Image from "next/image";
+import Navbar from "../components/Navbar";
+import Anya from "../../public/kenji.png";
+import Link from 'next/link'
+import Facebook from '../../public/Facebook_logo_(square).png'
+import Github from "../../public/github-mark-white.png"
+import Discord from "../../public/Discord.svg"
+import Sui from "../../public/07pmskirfnr71.jpg"
+import Iframe from 'react-iframe'
+
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const handleCopy1stEmail = async () => {
+    try {
+    // Copy text to clipboard
+      await navigator.clipboard.writeText("kenjimsalise@gmail.com"); 
+    } catch (err) {
+      console.error("Failed to copy text:", err);
+    }
+  };
+  return (
+    <main>
+      <title>Home</title>
+      <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+
+      <div className="content-center">
+      <Navbar />
+      </div>
+      <div className="h-[3rem]"></div>
+      <div className="flex justify-center items center">
+        <div className="box-border md:w-[30rem] md:h-fit lg:w-[50rem] lg:h-fit ring-[4px] py-10 rounded-lg px-5 bg-[#453A4C] ring-[#362c3d] shadow-[#362c3d] shadow-2xl inset-shadow-[#453A4C] " >
+          <div className="flex lg:w-[50rem] gap-12 pb-5 md:gap-12">
+            <div className="relative md:size-40 size-20">
+            <Image src={Anya} sizes="100vw"
+            style={{borderRadius: '100%',
+            objectFit: 'cover'}} fill priority alt="Kenji"/>
+            </div>
+            <div className=" flex content-center my-10 inset-0 text-[#4D3E3E] transition-all ease-in-out duration-150 hover:text-[#FEEAE1] hover:bg-[#4D3E3E] bg-[#FEEAE1] md:size-50 w-2/3 h-20 ring-[#D8D7DE] ring-4 rounded-lg ">
+              <h1 className="lg:text-[39px]  text-[20px] py-4 px-10">Hello! Nice to meet you!</h1>
+            </div>
+          </div>
+            <p className="text-[#FEEAE1] inline">I am Kenji Sebastian M. Salise, a student at the Ateneo de Davao University currently undertaking the undergraduate course: Bachelor of Science in Information Technology. You can contact me via email at </p>
+            <button onClick={handleCopy1stEmail}><p className="underline hover:text-[#729FD7] transition duration-150 inline">kenjimsalise@gmail.com</p></button>
+           .
+           <div className='my-10 py-5 h-fit ring-[#D8D7DE] ring-4 px-5 rounded-lg bg-[#FEEAE1] text-[#4D3E3E]'>
+            <Image src={Sui} className="float-right size-[200px] ring-4 ring-[#D8D7DE] rounded-sm" alt='hololive'/>
+            <h1 className="text-[40px] font-bold" >Hobbies (趣味)</h1>
+            <p className='text-[20px] '>- Listening to Hoshimachi Suisei (星街すいせい) 
+            <br/>- Learning Japanese 
+            <br/>- Reading Manga/Manwha
+            <br/>- Watching Japanese Dramas and Anime
+            <br/>- Writing/Reading Japanese
+            <br/>- Code in C++/Python/Java in my spare time
+            </p>
+            <div className='content-center items-center text-[3rem] font-bold'>
+              <p>Spotify Recommendations</p>
+              
+            <Iframe className='rounded-xl' url="https://open.spotify.com/embed/playlist/4QRVJZbxwP8OixuGyUMpmW?utm_source=generator" width="50%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"/>
+            
+            </div>
+            
+            </div>
+
+
+
+
+            <div className="w-full flex  items-center justify-center gap-11 pt-10">
+              <button> 
+                <Link href='https://github.com/KenjiSalise'>
+              <div className="bg-[#729FD7] hover:bg-[#4D3E3E] transition-all ease-in-out duration-150 py-2 px-10 rounded-lg flex gap-1">
+              <div className='size-6'>
+                <Image src={Github} alt='Github'/>
+                </div>
+                Gitub
+              </div>
+              </Link>
+              </button>
+              <button>
+              <Link href='https://github.com/KenjiSalise'>
+              <div className="bg-[#729FD7] hover:bg-[#4D3E3E] transition-all ease-in-out duration-150 py-2 px-10 rounded-lg flex gap-1">
+              <div className='size-6'>
+                <Image src={Facebook} alt='Meta'/>
+                </div>
+                Facebook
+              </div>
+              </Link>
+              </button>
+              <button>
+              <Link href='https://discord.gg/qN3HpxBDWM'>
+              <div className="bg-[#729FD7] hover:bg-[#4D3E3E] transition-all ease-in-out duration-150 py-2 px-10 rounded-lg flex gap-1">
+              <div className='size-6 flex'>
+                <Image src={Discord} alt='Clyde'/>
+                </div>
+                Discord Server
+              </div>
+              </Link>
+              </button>
+            </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+    </main>
   );
 }

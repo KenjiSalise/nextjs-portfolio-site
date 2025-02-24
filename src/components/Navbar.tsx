@@ -18,9 +18,9 @@ function Item({ link, text }: { link: string, text: string }) {
 type ItemProps = Record<string, string>;
 function Items({ items }: { items: ItemProps }) {
   const thing = Object
-    .entries(items)
+    .entries(items)                                 
     .map(
-      ([link, text]) => <Item link={link} text={text} />
+      ([link, text], index) => <Item key={index} link={link} text={text} />
     );
   return (
     <ul className="flex items-center justify-around ">
